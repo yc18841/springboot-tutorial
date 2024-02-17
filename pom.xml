@@ -16,7 +16,8 @@
     <properties>
         <java.version>17</java.version>
         <cache.version>3.0.5</cache.version>
-
+		<maven.compiler.source>17</maven.compiler.source>
+    	<maven.compiler.target>17</maven.compiler.target>
         <flywaydb.version>9.16.3</flywaydb.version>
         <h2database.version>2.1.214</h2database.version>
         <postgres.version>42.4.0</postgres.version>
@@ -137,6 +138,8 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+	                <source>17</source>
+	          		<target>17</target>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
