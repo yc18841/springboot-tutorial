@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.0</version>
+        <version>3.2.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.saggu</groupId>
@@ -14,10 +14,8 @@
     <name>SpringBoot-Tutorial</name>
     <description>Saggu.UK Spring Tutorial</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>21</java.version>
         <cache.version>3.0.5</cache.version>
-		<maven.compiler.source>17</maven.compiler.source>
-    	<maven.compiler.target>17</maven.compiler.target>
         <flywaydb.version>9.16.3</flywaydb.version>
         <h2database.version>2.1.214</h2database.version>
         <postgres.version>42.4.0</postgres.version>
@@ -65,14 +63,12 @@
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
-            <version>4.10.0</version>
         </dependency>
 
         <!-- Cache -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-cache</artifactId>
-            <version>${cache.version}</version>
         </dependency>
 
         <!-- Redis -->
@@ -96,7 +92,6 @@
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
-            <version>${flywaydb.version}</version>
         </dependency>
 
         <dependency>
@@ -108,13 +103,11 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>${h2database.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>${postgresql.version}</version>
         </dependency>
 
         <!-- End Flyway -->
@@ -138,8 +131,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-	                <source>17</source>
-	          		<target>17</target>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
@@ -188,7 +179,7 @@
                     </formats>
                     <java>
                         <googleJavaFormat>
-                            <version>1.15.0</version>
+                            <version>1.17.0</version>
                             <style>AOSP</style>
                             <reflowLongStrings>true</reflowLongStrings>
                         </googleJavaFormat>
